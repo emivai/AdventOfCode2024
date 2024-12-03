@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2024.Day1;
 
-public class Day1
+public static class Day1
 {
     private static readonly List<int> LeftList = [];
     private static readonly List<int> RightList = [];
@@ -54,14 +54,12 @@ public class Day1
     {
         long answer = 0;
 
-        for (var i = 0; i < LeftList.Count; i++)
+        foreach (var leftElement in LeftList)
         {
-            var leftElement = LeftList[i];
             var rightElement = RightList.Count(j => j == leftElement);
             
             if (rightElement != 0)
-                answer += leftElement + rightElement;
-
+                answer += leftElement * rightElement;
         }
 
         return answer;
