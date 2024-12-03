@@ -43,9 +43,7 @@ public static class Day1
         long answer = 0;
 
         for (var i = 0; i < LeftList.Count; i++)
-        {
             answer += Math.Abs(LeftList[i] - RightList[i]);
-        }
 
         return answer;
     }
